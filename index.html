@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Embedded Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verification</title>
+
     <style>
         html, body {
             margin: 0;
@@ -13,16 +16,26 @@
         iframe {
             width: 100%;
             height: 100%;
-            border: none;
+            border: 0;
+            display: block;
         }
     </style>
 </head>
+
 <body>
 
-    <iframe
-        src="https://example.com"
-        title="Embedded Website">
-    </iframe>
+    <iframe id="verification"></iframe>
+
+    <script>
+        const parts = window.location.pathname
+            .split('/')
+            .filter(Boolean);
+
+        const certificateId = parts[parts.length - 1];
+
+        document.getElementById('verification').src =
+            `https://eliteoffshore.info/verification/${encodeURIComponent(certificateId)}`;
+    </script>
 
 </body>
 </html>
