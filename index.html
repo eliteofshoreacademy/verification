@@ -3,8 +3,8 @@
 <body>
 
 <script>
-    const parts = window.location.pathname.split('/').filter(Boolean);
-    const certificateId = parts[parts.length - 1];
+    const params = new URLSearchParams(window.location.search);
+    const certificateId = params.get('id');
 
     document.body.innerText = certificateId;
 </script>
