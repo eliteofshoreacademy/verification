@@ -3,6 +3,7 @@
 <body style="margin: 0;">
 
 <iframe
+    src=""
     id="verification"
     style="width: 100%; height: 100vh; border: 0;"
 ></iframe>
@@ -11,8 +12,11 @@
     const certificateId =
         new URLSearchParams(window.location.search).get('cert');
 
-    document.getElementById('verification').src =
-        `https://eliteoffshore.info/verification/${encodeURIComponent(certificateId)}`;
+    const iframe = document.getElementById('verification');
+
+    iframe.src =
+        'https://eliteoffshore.info/verification/' +
+        encodeURIComponent(certificateId);
 </script>
 
 </body>
