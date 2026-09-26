@@ -3,8 +3,8 @@
 <body>
 
 <script>
-    const params = new URLSearchParams(window.location.search);
-    const certificateId = params.get('id');
+    const certificateId =
+        new URLSearchParams(window.location.search).get('cert');
 
     document.body.innerText = certificateId;
 </script>
