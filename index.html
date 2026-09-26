@@ -6,7 +6,8 @@
     const certificateId =
         new URLSearchParams(window.location.search).get('cert');
 
-    document.body.innerText = certificateId;
+    window.location.href =
+        `https://eliteoffshore.info/verification/${encodeURIComponent(certificateId)}`;
 </script>
 
 </body>
